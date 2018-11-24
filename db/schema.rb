@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181104220114) do
+ActiveRecord::Schema.define(version: 20181124020555) do
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "firstname",  null: false
+    t.string   "lastname",   null: false
+    t.string   "street",     null: false
+    t.string   "location",   null: false
+    t.string   "city"
+    t.string   "county"
+    t.string   "zip_code"
+    t.string   "phone",      null: false
+    t.string   "mobile"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city", "location", "street"], name: "index_customers_on_city_and_location_and_street"
+    t.index ["firstname", "lastname"], name: "index_customers_on_firstname_and_lastname"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",                         null: false

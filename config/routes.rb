@@ -14,4 +14,13 @@ Rails.application.routes.draw do
   patch  '/user/:id'       => 'users#update'
   delete '/user/:id'       => 'users#destroy'
   
+  #Customer actions
+  get  'customers'         => 'customers#index'
+  post  'customers/create'  => 'customers#create'
+  put   'customers/update'  => 'customers#update'
+  
+  
+  
+  
+  
 end
