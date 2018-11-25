@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   delete '/user/:id'       => 'users#destroy'
   
   #Customer actions
-  get  'customers'         => 'customers#index'
-  post  'customers/create'  => 'customers#create'
-  put   'customers/update'  => 'customers#update'
+  get   '/customers'                            => 'customers#index'
+  get   '/customers/find/:firstname'            => 'customers#find'
+  post  '/customers/create'                     => 'customers#create'
+  put   '/customers/:id'                        => 'customers#update'
+  delete '/customers/:id'                       => 'customers#destroy'
   
   
   
