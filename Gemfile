@@ -48,5 +48,6 @@ group :production do
 
  # Use for postgress database
   gem 'pg'
-  gem 'rails_12factor'
-  
+ 
+
+end  
