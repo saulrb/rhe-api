@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   put   '/customers/:id'                        => 'customers#update'
   delete '/customers/:id'                       => 'customers#destroy'
   
-  
-  
+  #Zip codes actions
+  get '/zip_codes'                              => 'zip_codes#index'
+  get '/zip_codes/find/:zip_code'               => 'zip_codes#find'
   
   
 end
