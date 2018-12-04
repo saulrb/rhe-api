@@ -1,4 +1,4 @@
-class Zipcodes < ActiveRecord::Migration[5.0]
+class CreateZipCodes < ActiveRecord::Migration[5.0]
   def change
     create_table :zip_codes do |t|
       t.string :zip_code , null:false
